@@ -1,1 +1,65 @@
 /*  your css code here. If applicable */
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+/* Container for panels */
+.container {
+  display: flex;
+  width: 90vw;
+  height: 80vh;
+}
+
+/* Each image panel */
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: white;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.7s ease-in;
+}
+
+/* Hidden text by default */
+.panel .img-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+/* Active expanded panel */
+.panel.active {
+  flex: 5;
+}
+
+/* Show text when active */
+.panel.active .img-text {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+}

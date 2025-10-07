@@ -3,72 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Expanding Cards</title>
-    <style>
-      /* General styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #111;
-      }
-
-      .container {
-        display: flex;
-        width: 90vw;
-        height: 80vh;
-      }
-
-      .panel {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 10px;
-        border-radius: 20px;
-        position: relative;
-        transition: flex 0.7s ease-in;
-        cursor: pointer;
-        width: 10%;
-      }
-
-      .panel .img-text {
-        color: white;
-        font-size: 24px;
-        position: absolute;
-        bottom: 20px;
-        left: 30px;
-        opacity: 0;
-        transition: opacity 0.3s ease-in;
-      }
-
-      .panel.active {
-        width: 50%;
-      }
-
-      .panel.active .img-text {
-        opacity: 1;
-      }
-
-      /* Responsive design */
-      @media (max-width: 600px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .panel {
-          margin: 5px 0;
-        }
-      }
-    </style>
   </head>
+
   <body>
     <div class="container">
       <div
@@ -95,6 +33,16 @@
         class="panel"
         id="panel-3"
         style="
+          background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1350&q=80');
+        "
+      >
+        <h3 class="img-text">Sunny Beach</h3>
+      </div>
+
+      <div
+        class="panel"
+        id="panel-4"
+        style="
           background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1353&q=80');
         "
       >
@@ -103,26 +51,15 @@
 
       <div
         class="panel"
-        id="panel-4"
+        id="panel-5"
         style="
           background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?auto=format&fit=crop&w=1351&q=80');
         "
       >
         <h3 class="img-text">Mountain Cloud</h3>
       </div>
-
-      <div
-        class="panel"
-        id="panel-5"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1350&q=80');
-        "
-      >
-        <h3 class="img-text">Sunny Beach</h3>
-      </div>
     </div>
 
-        <script type="module" src="./script.js"></script>
-
+    <script src="./script.js"></script>
   </body>
 </html>
